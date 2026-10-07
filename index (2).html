@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Cup 2035 | Mobility Pass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--o:#ff5a00;--k:#111;--g:#f5f5f5;--l:#ddd}
+*{box-sizing:border-box}body{margin:0;background:var(--g);color:var(--k);font-family:Inter,Arial,sans-serif}
+header{height:72px;background:#111;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 7%}
+.logo{font:800 25px "Barlow Condensed";letter-spacing:1px}.logo span{color:var(--o)}
+nav{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.hero{background:var(--o);color:#fff;padding:70px 7%;position:relative;overflow:hidden}
+.hero:after{content:"2035";position:absolute;right:-20px;bottom:-75px;font:800 280px "Barlow Condensed";color:#fff1}
+.kicker{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font:800 76px/0.9 "Barlow Condensed";text-transform:uppercase;margin:12px 0 22px;max-width:700px}
+.hero p{max-width:650px;font-size:17px;line-height:1.6;margin:0}
+main{max-width:1050px;margin:auto;padding:55px 20px}
+.title{font:800 43px "Barlow Condensed";text-transform:uppercase;margin:0 0 5px}.sub{color:#666;margin:0 0 28px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:55px}
+.card{background:#fff;border:1px solid var(--l);padding:25px}.num{font:800 42px "Barlow Condensed";color:var(--o)}
+.card h3{margin:7px 0}.card p{font-size:13px;color:#666;line-height:1.6}
+.layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px}.info{background:#111;color:#fff;padding:32px}.info h2{font:800 42px "Barlow Condensed";text-transform:uppercase;margin:0 0 12px}.info p{color:#ccc;font-size:14px;line-height:1.6}
+.transport{border-top:1px solid #444;padding:15px 0;font-size:14px}.transport b{color:var(--o);margin-right:9px}
+form{background:#fff;border:1px solid var(--l);padding:32px}label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin:16px 0 7px}
+input,select{width:100%;padding:13px;border:1px solid #ccc;font:inherit;background:#fff}button{width:100%;padding:15px;margin-top:22px;border:0;background:var(--o);color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.7px;cursor:pointer}
+.pass{display:none;background:#111;color:#fff;margin-top:38px;padding:32px}.passhead{display:flex;justify-content:space-between;border-bottom:1px solid #444;padding-bottom:18px}.passtitle{font:800 40px "Barlow Condensed";text-transform:uppercase}.status{background:var(--o);padding:8px 11px;font-size:10px;font-weight:800;height:max-content}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#444;margin:25px 0}.item{background:#111;padding:16px}.item small{display:block;color:#999;font-size:9px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.qr{background:#fff;color:#111;text-align:center;padding:22px}.qr img{width:180px;height:180px}.qr p{font-size:11px;font-weight:800;letter-spacing:1px}
+.notice{border-left:4px solid var(--o);background:#1b1b1b;padding:14px;color:#ccc;font-size:12px;line-height:1.5;margin-top:18px}
+footer{background:#111;color:#aaa;text-align:center;padding:28px;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+@media(max-width:800px){nav{display:none}.cards,.layout{grid-template-columns:1fr}h1{font-size:58px}}
+</style>
+</head>
+<body>
+<header><div class="logo">WORLD CUP <span>2035</span></div><nav>Mobility Pass · Transporte sostenible</nav></header>
+
+<section class="hero">
+<div class="kicker">Portal oficial de movilidad</div>
+<h1>Muévete por el Mundial.<br>Muévete mejor.</h1>
+<p>Una acreditación digital para facilitar los desplazamientos de los aficionados entre las sedes del Mundial de Baloncesto 2035 mediante transporte colectivo y sostenible.</p>
+</section>
+
+<main>
+<h2 class="title">¿Cómo funciona?</h2><p class="sub">Activa tu acreditación de transporte en tres pasos.</p>
+<div class="cards">
+<div class="card"><div class="num">01</div><h3>Accede</h3><p>Escanea el código QR del evento y entra en el Portal de Movilidad.</p></div>
+<div class="card"><div class="num">02</div><h3>Regístrate</h3><p>Introduce los datos de tu entrada, sede, fecha y transporte.</p></div>
+<div class="card"><div class="num">03</div><h3>Viaja</h3><p>Genera tu Mobility Pass y preséntalo en los puntos de acceso.</p></div>
+</div>
+
+<div class="layout" id="registro">
+<section class="info"><h2>Mobility Pass</h2><p>Tu acreditación digital concentra la información necesaria para utilizar los transportes oficiales del Mundial.</p>
+<div class="transport"><b>01</b> Tren entre ciudades</div>
+<div class="transport"><b>02</b> Autobuses lanzadera</div>
+<div class="transport"><b>03</b> Transporte urbano</div>
+<div class="transport"><b>04</b> Conexiones multimodales</div></section>
+
+<form id="form"><h2 style="font:800 35px 'Barlow Condensed';text-transform:uppercase;margin:0">Solicitar acreditación</h2>
+<label>Nombre y apellidos</label><input id="name" required placeholder="Introduce tu nombre completo">
+<label>Número de entrada</label><input id="ticket" required placeholder="Ej. WC35-000123">
+<label>Sede</label><select id="city" required><option value="">Selecciona una sede</option><option>Madrid</option><option>Barcelona</option><option>Valencia</option><option>Sevilla</option><option>Málaga</option></select>
+<label>Fecha del partido</label><input id="date" type="date" required>
+<label>Transporte principal</label><select id="transport" required><option value="">Selecciona una opción</option><option>Tren + lanzadera</option><option>Autobús lanzadera</option><option>Transporte urbano</option><option>Combinado multimodal</option></select>
+<button type="submit">Generar Mobility Pass</button></form>
+</div>
+
+<section class="pass" id="pass"><div class="passhead"><div><div class="passtitle">Mobility Pass</div><div style="font-size:11px;color:#999">WORLD CUP 2035 · ACREDITACIÓN DE TRANSPORTE</div></div><div class="status">ACTIVA</div></div>
+<div class="grid"><div class="item"><small>Titular</small><strong id="pname"></strong></div><div class="item"><small>Número de entrada</small><strong id="pticket"></strong></div><div class="item"><small>Sede</small><strong id="pcity"></strong></div><div class="item"><small>Fecha</small><strong id="pdate"></strong></div><div class="item" style="grid-column:1/-1"><small>Transporte autorizado</small><strong id="ptransport"></strong></div></div>
+<div class="qr"><img id="personalQR"><p>ACERCA EL CÓDIGO AL LECTOR DE ACCESO</p></div>
+<div class="notice"><strong style="color:#ff5a00">MOVILIDAD SOSTENIBLE</strong><br>Esta acreditación favorece el uso del transporte colectivo y la conexión entre sedes para reducir desplazamientos individuales y emisiones.</div>
+<button onclick="window.print()">Imprimir / guardar acreditación</button></section>
+</main>
+<footer>WORLD CUP 2035 · MOBILITY PASS · TRANSPORTE OFICIAL · MOVILIDAD SOSTENIBLE</footer>
+
+<script>
+function qr(t){return "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data="+encodeURIComponent(t)}
+document.getElementById("form").addEventListener("submit",e=>{
+e.preventDefault();
+let n=name.value,t=ticket.value,c=city.value,d=date.value,tr=transport.value;
+pname.textContent=n;pticket.textContent=t;pcity.textContent=c;
+pdate.textContent=new Date(d+"T12:00:00").toLocaleDateString("es-ES");
+ptransport.textContent=tr;
+personalQR.src=qr("WC2035|"+n+"|"+t+"|"+c+"|"+d+"|"+tr);
+document.getElementById("pass").style.display="block";
+document.getElementById("pass").scrollIntoView({behavior:"smooth"});
+});
+</script>
+</body></html>
